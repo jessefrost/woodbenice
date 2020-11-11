@@ -26,7 +26,9 @@ p {
 }
 
 nav {
-    background: #14213d;
+
+    background-color: #14213d;
+
     height: 80px;
     width: 100%;
     position: fixed;
@@ -34,12 +36,22 @@ nav {
     z-index: 1;
 }
 
-label.logo {
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
+nav a:hover {
+    background-color: #14213d;
+}
+
+.logo {
+    width: 250px;
+    padding-top: 15px;
+    padding-left: 70px;
+    cursor: pointer;
+
+}
+
+.logo:hover {
+    transform: scale(0.8);
+    transition: .8s;
+
 }
 
 @media (max-width: 414px) {
@@ -53,8 +65,11 @@ label.logo {
 
 @media (max-width: 320px) {
 
-    label.logo {
-        display: none;
+    .logo {
+
+        width: 180px;
+
+        padding-left: 30px;
 
     }
 
@@ -82,10 +97,11 @@ nav ul li a {
 
 }
 
-a.active,
-a:hover {
+
+nav ul li a:hover {
     background: #fca311;
     transition: .8s;
+    color: black;
 }
 
 .checkbtn {
@@ -96,6 +112,13 @@ a:hover {
     margin-right: 40px;
     cursor: pointer;
     display: none;
+}
+
+.checkbtn:hover {
+    color: #fca311;
+
+
+    transition: 0.3s ease;
 }
 
 #check {
@@ -144,7 +167,7 @@ a:hover {
     a:hover,
     a.active {
         background: none;
-        color: #000000;
+        color: white;
     }
 
     #check:checked ~ ul {
@@ -173,7 +196,7 @@ a:hover {
 
 #second {
     padding-top: 50px;
-     padding-bottom: 100px;
+    padding-bottom: 100px;
     background-color: white;
     height: 100%;
     display: flex;
@@ -255,6 +278,11 @@ a:hover {
 
 }
 
+
+
+
+
+
 #third .down li {
 
     font-weight: 500;
@@ -268,15 +296,15 @@ a:hover {
 }
 
 #third .down li:nth-child(1) {
-    background-image: url('../images/con-barrier@3x.png');
+    background-image: url('../images/con-ruler-pencil@3x.png');
 }
 
 #third .down li:nth-child(2) {
-    background-image: url('../images/con-angle-grinder@3x.png');
+    background-image: url('../images/con-hammer-screwdriver-2@3x.png');
 }
 
 #third .down li:nth-child(3) {
-    background-image: url('../images/con-circular-saw@3x.png');
+    background-image: url('../images/con-tape@3x.png');
 }
 
 #third .down li:nth-child(4) {
@@ -288,16 +316,16 @@ a:hover {
 }
 
 #third .down li:nth-child(6) {
-    background-image: url('../images/con-plumb-line@3x.png');
+    background-image: url('../images/con-u-bend@3x.png');
 }
 
 @media (max-width: 414px) {
 
     #third .down li {
 
-        font-size: 18px;
-        padding: 70px;
-        background-size: 60px;
+        font-size: 16px;
+        padding: 60px;
+        background-size: 50px;
     }
 }
 
@@ -441,15 +469,18 @@ a:hover {
     }
 
 }
+
 @media (max-width: 320px) {
     #fourth div {
-display: none;
-}
-     #fourth .contact {
- height: 460px;
-}
+        display: none;
+    }
+
+    #fourth .contact {
+        height: 460px;
+    }
 
 }
+
 #vier {
     background-color: rebeccapurple;
     padding-bottom: 50px;
@@ -484,6 +515,7 @@ footer {
 
 .footerLogo {
     width: 230px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
