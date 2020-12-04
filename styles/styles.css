@@ -15,7 +15,7 @@ html {
 
 body {
     font-family: montserrat;
-    background-color: #14213d;
+    background-color: white;
 }
 
 
@@ -25,11 +25,46 @@ p {
     line-height: 18px;
 }
 
+.upperHeader {
+    background-color: #fca311;
+    z-index: 2;
+    width: 100%;
+    position: fixed;
+    padding-top: 3px;
+    padding-bottom: 3px;
+       display: flex;
+    justify-content: flex-start;
+
+}
+
+.upperHeader div {
+    margin-left: 100px;
+    font-size: 12px;
+    color: #14213d;
+ 
+}
+.upperHeader div {
+    margin-left: 100px;
+    font-size: 12px;
+    color: #14213d;
+}
+.upperHeader div .fa  {
+    margin-right: 10px;
+}
+
+.upperHeader div a {
+    color: black;
+}
+.upperHeader div a:hover {
+    color: white;
+}
+
+
 nav {
 
     background-color: #14213d;
-
-    height: 80px;
+    margin-top: 20px;
+    height: 70px;
     width: 100%;
     position: fixed;
     box-shadow: 0 6px 5px -6px black;
@@ -41,7 +76,7 @@ nav a:hover {
 }
 
 .logo {
-    width: 250px;
+    width: 150px;
     padding-top: 15px;
     padding-left: 70px;
     cursor: pointer;
@@ -67,9 +102,9 @@ nav a:hover {
 
     .logo {
 
-        width: 180px;
+    display: none;
 
-        padding-left: 30px;
+
 
     }
 
@@ -112,6 +147,7 @@ nav ul li a:hover {
     margin-right: 40px;
     cursor: pointer;
     display: none;
+    z-index: 30;
 }
 
 .checkbtn:hover {
@@ -123,6 +159,7 @@ nav ul li a:hover {
 
 #check {
     display: none;
+    z-index: 30;
 }
 
 @media (max-width: 952px) {
@@ -139,29 +176,38 @@ nav ul li a:hover {
 @media (max-width: 858px) {
     .checkbtn {
         display: block;
+position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 6;
     }
+    
 
     ul {
+    
         position: fixed;
         width: 100%;
-        height: 100vh;
+        height: 200vh;
         background: rgb(252, 163, 17, 0.8);
-
-        top: 80px;
+top: 0;
+  
         left: -100%;
         text-align: center;
         transition: all .5s ease;
+        padding-top:90px
     }
 
     nav ul li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
+  
     }
 
     nav ul li a {
         font-size: 20px;
         z-index: 1;
+        
     }
 
     a:hover,
@@ -178,42 +224,91 @@ nav ul li a:hover {
 #first {
 
     display: flex;
-    justify-content: center;
+
     align-items: center;
-    background-image: url('../images/architects-workplace_shade.jpg');
-    height: calc(120vh - 80px);
+    justify-content: center;
+
+    background-image: url('../images/architects-workplace_shade2.jpg');
+    height: calc(100vh - 80px);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
+
 }
 
-#first section h1 {
-    color: #ffffff;
-    font-size: 55px;
+#first section div section {
+    margin-bottom: 50px;
+}
 
+#first section div section h2 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+  
+}
+
+#first section div section h4 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 100;
+    padding-top: 10px;
+}
+
+#first section div img {
+    position: absolute;
+    width: clamp(14rem, 30%, 19rem); 
+    background-color: #14213d;
+    border: solid 6px #14213d;
+    border-radius: 250px;
+    box-shadow: 0 6px 5px -6px black;
+   left: 80px;
+  bottom: 30px;
+
+
+}
+@media (max-width: 500px) {
+    #first section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #first section div section h4 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 320px) {
+    #first section div img {
+        width: 10rem;
+    }
 }
 
 #second {
-    padding-top: 50px;
+
+    padding-top: 70px;
     padding-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+
     background-color: white;
-    height: 100%;
+
     display: flex;
-    justify-content: center;
+
 
 }
 
+#second .left {
+    max-width: 600px;
+}
 
 #second .left h2 {
     color: #14213d;
-    text-align: center;
+
 }
 
 #second .left p {
-    margin-top: 25px;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-top: 20px;
+   
 
 }
 
@@ -225,13 +320,151 @@ nav ul li a:hover {
 
     width: 125px;
 
-    margin: 0 auto;
+
     margin-top: 16px;
 }
 
+
+
+
+.counterOut {
+    margin-top: 50px;
+    display: flex;
+
+max-width: 600px;
+    height: 30vh;
+    justify-content: flex-start;
+  
+    padding-top: 30px;
+    border-radius: 25px;
+   
+    
+}
+
+
+.counters {
+  
+
+
+    margin: 0 auto;
+ 
+    
+}
+.counters img {
+  margin: 0 auto;
+    width: 50px;
+}
+
+.counters .container{
+    display: grid;
+    grid-gap: 5px;
+    text-align: center;
+
+}
+
+.counters .container h3 {
+    font-weight: 600;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #14213d;
+}
+
+
+
+.counters .counter {
+    font-size: 35px;
+    color: #14213d;
+    margin: 0 auto;
+  
+}
+
+
+
+
+
+#second .right {
+    width: 100%;
+ 
+
+}
+
+#second .right section {
+  display: flex;
+    justify-content: flex-end;
+  
+  
+    
+ 
+ 
+
+}
+
+#second .right section img {
+
+ 
+padding-top: 72px;
+    width: clamp(18rem, 90%, 28rem); 
+
+
+
+}
+@media (max-width: 1040px) {
+    #second {
+ 
+    
+    }
+    .counterOut {
+        height: 15vw;
+    }
+}
+
+
+@media (max-width: 920px) {
+    #second .right section img {
+        display: none;
+    }
+    #second  {
+        width: 100%;
+        display: block;
+    }
+    #second .left h2 {
+        text-align: center;
+    }
+    
+    #second .left .bar {
+       margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+    #second  {
+       padding-left: 50px;
+        padding-right: 50px;
+
+    }
+    #first section div img {
+        margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+    }
+}
+
+
+@media (max-width:360px) {
+    #second {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 #third {
-    background-color: #e5e5e5;
+    background-color: #14213d;
     height: 100%;
+ 
 
 
 }
@@ -242,7 +475,7 @@ nav ul li a:hover {
 }
 
 #third .up h2 {
-    color: #000000;
+    color: white;
     text-align: center;
 
 }
@@ -270,14 +503,19 @@ nav ul li a:hover {
     margin-right: 10%;
     padding-top: 60px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+   grid-gap: 20px;
     grid-auto-rows: 100px;
 
     justify-items: center;
-
+overflow: hidden;
+    padding-bottom: 50px;
 }
-
+@media (max-width: 700px){
+    #third .down {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
 
 
 
@@ -287,36 +525,36 @@ nav ul li a:hover {
 
     font-weight: 500;
     color: #fca311;
-    padding: 50px;
+    padding: 70px;
     background-repeat: no-repeat;
-    background-size: 40px;
+    background-size: 60px;
     background-position: center top;
 
 
 }
 
 #third .down li:nth-child(1) {
-    background-image: url('../images/con-ruler-pencil@3x.png');
+    background-image: url('../images/Pencil%20icon.png');
 }
 
 #third .down li:nth-child(2) {
-    background-image: url('../images/con-hammer-screwdriver-2@3x.png');
+    background-image: url('../images/pencilicon%2003.png');
 }
 
 #third .down li:nth-child(3) {
-    background-image: url('../images/con-tape@3x.png');
+    background-image: url('../images/pencilicon%2004.png');
 }
 
 #third .down li:nth-child(4) {
-    background-image: url('../images/con-level@3x.png');
+    background-image: url('../images/pencilicon%2006.png');
 }
 
 #third .down li:nth-child(5) {
-    background-image: url('../images/con-electricity@3x.png');
+    background-image: url('../images/pencilicon%2005.png');
 }
 
 #third .down li:nth-child(6) {
-    background-image: url('../images/con-u-bend@3x.png');
+    background-image: url('../images/pencilicon%2002.png');
 }
 
 @media (max-width: 414px) {
@@ -328,6 +566,78 @@ nav ul li a:hover {
         background-size: 50px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+.containerFoto {
+
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 1rem 1rem;
+    background-color: white;
+        padding-top: 30px;
+    padding-bottom: 30px;
+  
+
+}
+
+
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+      display: flex;
+    justify-content: center;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 300px;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #fourth .contact {
@@ -441,7 +751,7 @@ nav ul li a:hover {
 
     padding: 16px 4px 16px 0;
     border-radius: 6px;
-    font-size: 13px;
+    font-size: 11px;
     box-shadow: 10px 10px 40px -14px #000
 }
 
@@ -456,7 +766,7 @@ nav ul li a:hover {
 
         bottom: 0;
 
-        font-size: 9px;
+        font-size: 8px;
         margin-top: 65px;
 
         padding: 18px 40px 18px 0;
@@ -497,8 +807,8 @@ nav ul li a:hover {
 
 
 footer {
-    background-color: white;
-    padding: 90px 0;
+    background-color: #fca311;
+    padding: 30px 0;
     margin:
 }
 
@@ -514,9 +824,12 @@ footer {
 }
 
 .footerLogo {
-    width: 230px;
+    width: 130px;
     padding-bottom: 20px;
-    text-align: center;
+    
+
+    margin-left: 25%
+
 }
 
 
@@ -549,7 +862,7 @@ svg:hover {
 
 
 .right-col a:hover {
-    color: rgb(210, 168, 205);
+    color: WHITE;
 
 }
 
@@ -573,7 +886,9 @@ svg:hover {
         text-align: center;
     }
 
-
+    .footerLogo {
+        margin: 0;
+    }
 }
 
 
